@@ -1,9 +1,57 @@
-
 <!DOCTYPE html>
-            margin-top: 20px;
-            font-size: 13px;
-            color: #aaa;
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>毛老师的工作室</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 50px 40px;
+            max-width: 420px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .avatar {
+            width: 100px; height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 0 auto 20px;
+            display: flex; justify-content: center; align-items: center;
+            font-size: 40px; color: white;
+        }
+        .name { font-size: 28px; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; }
+        .title { font-size: 14px; color: #888; margin-bottom: 24px; }
+        .description { font-size: 15px; color: #555; line-height: 1.8; margin-bottom: 30px; }
+        .tags { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 30px; }
+        .tag {
+            background: #f0f0f5; color: #667eea;
+            padding: 6px 16px; border-radius: 20px;
+            font-size: 13px; font-weight: 500; cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .tag:hover { background: #667eea; color: white; }
+        .btn {
+            display: inline-block; padding: 12px 36px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white; border: none; border-radius: 25px;
+            font-size: 15px; cursor: pointer; transition: opacity 0.2s ease;
+        }
+        .btn:hover { opacity: 0.9; }
+        .counter { margin-top: 20px; font-size: 13px; color: #aaa; }
     </style>
 </head>
 <body>
@@ -36,5 +84,3 @@
     </script>
 </body>
 </html>
-
-
