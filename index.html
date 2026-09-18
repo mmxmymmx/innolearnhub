@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+            margin-top: 20px;
+            font-size: 13px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="avatar">毛</div>
+        <h1 class="name">毛老师</h1>
+        <p class="title">企业培训 · OD · 企业教练</p>
+        <p class="description">
+            专注决策力课程研发，把抽象理论变成可实操的流程。<br>
+            拒绝枯燥说教，让每一次工作坊都有真正的产出。
+        </p>
+        <div class="tags">
+            <span class="tag">决策力</span>
+            <span class="tag">组织发展</span>
+            <span class="tag">工作坊设计</span>
+            <span class="tag">AI赋能</span>
+        </div>
+        <button class="btn" onclick="handleClick()">打个招呼 👋</button>
+        <p class="counter" id="counter">已打招呼 0 次</p>
+    </div>
+    <script>
+        let count = 0;
+        function handleClick() {
+            count++;
+            document.getElementById('counter').textContent = '已打招呼 ' + count + ' 次';
+            if (count === 10) {
+                alert('🎉 你发现了彩蛋！这个功能是你亲手做出来的。');
+            }
+        }
+    </script>
+</body>
+</html>
+
+
