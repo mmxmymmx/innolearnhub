@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程 - 毛老师</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+            min-height: 100vh;
+            background: #f8fafc;
+            color: #1e293b;
+        }
+        /* 导航栏 */
+        nav {
+            background: white;
+            padding: 16px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        nav .logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: #667eea;
+            text-decoration: none;
+        }
+        nav .links { display: flex; gap: 24px; }
+        nav .links a {
+            text-decoration: none;
+            color: #64748b;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        nav .links a:hover { color: #667eea; }
+        nav .links a.active { color: #667eea; font-weight: 600; }
+        /* 内容区 */
+        .container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 24px;
+        }
+        h1 { font-size: 32px; margin-bottom: 12px; }
+        .subtitle { color: #64748b; margin-bottom: 40px; font-size: 15px; }
+        /* 课程卡片 */
+        .course-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            transition: transform 0.2s;
+        }
+        .course-card:hover { transform: translateY(-3px); }
+        .course-card h2 { font-size: 20px; margin-bottom: 8px; color: #1e293b; }
+        .course-card p { color: #64748b; font-size: 14px; line-height: 1.7; }
+        .course-tag {
+            display: inline-block;
+            background: #eff6ff;
+            color: #667eea;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <a href="index.html" class="logo">毛老师</a>
+        <div class="links">
+            <a href="index.html">首页</a>
+            <a href="courses.html" class="active">课程</a>
+            <a href="contact.html">联系我</a>
+        </div>
+    </nav>
+    <!-- 内容 -->
+    <div class="container">
+        <h1>我的课程</h1>
+        <p class="subtitle">每门课都经过真实企业场景验证</p>
+
+        <div class="course-card">
+            <h2>决策力工作坊</h2>
+            <p>用结构化工具把决策从"拍脑袋"变成可复制的流程。包含5W2H分析、5Why追问、决策矩阵等6套实操工具。</p>
+            <span class="course-tag">2天 · 40人小班</span>
+        </div>
+
+        <div class="course-card">
+            <h2>OD干预设计</h2>
+            <p>从诊断到干预的完整方法论，帮助企业识别组织瓶颈并设计针对性解决方案。</p>
+            <span class="course-tag">定制 · 企业内训</span>
+        </div>
+
+        <div class="course-card">
+            <h2>AI赋能组织效率</h2>
+            <p>教管理者如何用AI工具提升团队产出，包含实际案例和可落地的工具包。</p>
+            <span class="course-tag">1天 · 工作坊</span>
+        </div>
+    </div>
+</body>
+</html>
