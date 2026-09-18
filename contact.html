@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我 - 毛老师</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+            min-height: 100vh;
+            background: #f8fafc;
+            color: #1e293b;
+        }
+        nav {
+            background: white;
+            padding: 16px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        nav .logo {
+            font-size: 18px; font-weight: 700;
+            color: #667eea; text-decoration: none;
+        }
+        nav .links { display: flex; gap: 24px; }
+        nav .links a {
+            text-decoration: none; color: #64748b;
+            font-size: 14px; transition: color 0.2s;
+        }
+        nav .links a:hover { color: #667eea; }
+        nav .links a.active { color: #667eea; font-weight: 600; }
+        .container {
+            max-width: 500px;
+            margin: 60px auto;
+            padding: 0 24px;
+        }
+        h1 { font-size: 32px; margin-bottom: 12px; }
+        .subtitle { color: #64748b; margin-bottom: 40px; font-size: 15px; }
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #1e293b;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            margin-bottom: 20px;
+            transition: border-color 0.2s;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        textarea { min-height: 120px; resize: vertical; }
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        button:hover { opacity: 0.9; }
+        .success {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            color: #16a34a;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">毛老师</a>
+        <div class="links">
+            <a href="index.html">首页</a>
+            <a href="courses.html">课程</a>
+            <a href="contact.html" class="active">联系我</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>联系我</h1>
+        <p class="subtitle">有合作需求或问题，直接留言</p>
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+            <label>姓名</label>
+            <input type="text" placeholder="你的名字" required>
+            <label>邮箱</label>
+            <input type="email" placeholder="your@email.com" required>
+            <label>留言内容</label>
+            <textarea placeholder="说说你的需求..."></textarea>
+            <button type="submit">发送消息</button>
+        </form>
+        <div class="success" id="successMsg">
+            ✅ 消息已发送，我会尽快回复你！
+        </div>
+    </div>
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('successMsg').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
